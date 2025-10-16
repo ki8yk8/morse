@@ -1,0 +1,19 @@
+:root {
+	--color-rich-black: #011627;
+	--color-baby-powder: #fdfffc;
+	--color-light-sea-green: #2ec4b6;
+	--color-red-pantone: #e71d36;
+	--color-orange-peel: #ff9f1c;
+
+	font-size: 20px;
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+}
+
+body {
+	color: var(--color-rich-black);
+	background-color: var(--color-baby-powder);
+	font-family: "Poppins", sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+}
