@@ -1,0 +1,18 @@
+.dot-dash__span {
+	display: inline-block;
+	height: 0.6rem;
+	margin: 0 0.1rem;
+	border-radius: 0.3rem;
+}
+
+.dot-dash__span--dot {
+	width: 0.6rem;
+}
+
+.dot-dash__span--dash {
+	width: 1.8rem;
+}
+
+.dot-dash__span--space {
+	width: 1.2rem;
+}
