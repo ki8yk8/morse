@@ -7,7 +7,7 @@ function App() {
 			<h1>Morse Code Signal Communicator</h1>
 			<p>
 				<DotDash
-					content=".-.- --.-- ..-."
+					content="-.-/---/...//./.-/-//-/---/-"
 					colors={[
 						"var(--color-red-pantone)",
 						"var(--color-rich-black)",
