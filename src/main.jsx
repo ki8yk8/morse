@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
+import "./stylesheets/reset.css";
 import "./index.css";
 import "./stylesheets/typography.css";
 import "./stylesheets/component.css";

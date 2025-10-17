@@ -10,7 +10,9 @@ function App() {
 
 	return (
 		<>
-			<h1>Morse Code Signal Communicator</h1>
+			<header>
+				<h1>Morse</h1>
+			</header>
 			<div>
 				<DotDash
 					content={english2Morse(WELCOME_WORD)}
