@@ -1,3 +1,4 @@
+import React from "react";
 import "./style.css";
 
 const class_name_mapping = {
@@ -25,7 +26,7 @@ export default function DotDash({
 	return (
 		<p className="dot-dash">
 			{content.split("//").map((word, index) => (
-				<>
+				<React.Fragment key={`${index}`}>
 					{word.split("").map((item, i) => (
 						<span
 							key={`${index}-${i}`}
@@ -47,7 +48,7 @@ export default function DotDash({
 							//
 						</span>
 					)}
-				</>
+				</React.Fragment>
 			))}
 		</p>
 	);
