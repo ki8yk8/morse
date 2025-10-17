@@ -20,7 +20,7 @@ function App() {
 						"transparent",
 					]}
 				/>
-				<button onClick={() => playMorse(english2Morse(WELCOME_WORD))}>
+				<button className="u-primary" onClick={() => playMorse(english2Morse(WELCOME_WORD))}>
 					Play Morse Sound
 				</button>
 			</div>
