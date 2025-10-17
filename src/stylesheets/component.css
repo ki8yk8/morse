@@ -29,3 +29,11 @@ button.u-secondary {
 	background-color: var(--color-baby-powder);
 	color: var(--color-rich-black);
 }
+
+button.u-plain {
+	background-color: transparent;
+	color: inherit;
+	padding: 0;
+	border: none;
+	font-weight: 400;
+}
