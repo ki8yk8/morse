@@ -1,6 +1,10 @@
 .u-font-poppins {
 	font-family: "Poppins", sans-serif;
 }
+.u-font-emoji {
+	font-family: "Noto Emoji", sans-serif;
+	font-optical-sizing: auto;
+}
 
 .u-font-weight-normal {
 	font-weight: 400;

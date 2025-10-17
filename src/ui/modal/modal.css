@@ -1,0 +1,11 @@
+.modal {
+	max-width: 40vw;
+	max-height: 60vh;
+}
+
+@media  screen and (max-width: 720px) {
+	.modal {
+		max-width: 90vw;
+		max-height: 90vh;
+	}
+}
