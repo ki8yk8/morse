@@ -14,13 +14,20 @@
 	list-style-type: none;
 }
 
-.sidebar__menu_item {
+.sidebar .sidebar__menu_item {
+	width: 100%;
 	display: flex;
 	align-items: center;
 	gap: 1rem;
 	padding: 0.5rem 1rem;
 }
-.sidebar__menu_item:hover {
+.sidebar .sidebar__menu_item:hover {
 	background-color: var(--color-dark-pastel-green);
+	color: var(--color-baby-powder);
 	cursor: pointer;
+}
+.sidebar .sidebar__menu_item--active {
+	background-color: var(--color-rich-black);
+	color: var(--color-baby-powder);
+
 }

@@ -1,6 +1,6 @@
 import MenuItem from "./menu-item";
 
-export default function Group({ details }) {
+export default function Group({ details, onClick, active_item }) {
 	return (
 		<div>
 			<small
@@ -16,7 +16,11 @@ export default function Group({ details }) {
 			<ul>
 				{details.children.map((item, index) => (
 					<li key={index}>
-						<MenuItem details={item} />
+						<MenuItem
+							details={item}
+							onClick={onClick.bind(null, item["name"])}
+							active={item["name"] === active_item}
+						/>
 					</li>
 				))}
 			</ul>
