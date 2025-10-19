@@ -4,7 +4,24 @@
 	margin-top: 1rem;
 }
 
-.translate_page textarea {
-	display: block;
+.translate_page section {
 	flex-grow: 1;
+}
+
+.translate_page section>small {
+	display: block;
+	font-weight: 500;
+	margin-bottom: 0.25rem;
+	color: var(--color-dark-pastel-green);
+}
+
+.translate_page textarea {
+	width: 100%;
+	height: 300px;
+	resize: none;
+}
+
+.translate_page section>footer {
+	display: flex;
+	justify-content: flex-end;
 }
