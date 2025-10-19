@@ -10,23 +10,29 @@ export default function LearnPage() {
 		<>
 			<h2>Learn Morse Code</h2>
 			<main style={{ marginTop: "1rem", overflow: "auto" }}>
-				<ul style={{ display: "flex", flexWrap: "wrap", gap: "1rem 0.5rem" }}>
+				<ul
+					style={{
+						display: "grid",
+						gridTemplateColumns: "repeat(4, 1fr)",
+						gap: "0.5rem 1rem",
+					}}
+				>
 					{Object.entries(MORSE_MAPPING)
 						.filter((item) => item[0] !== " ")
 						.map((item, index) => (
 							<li
 								key={index}
 								style={{
-									width: "220px",
 									display: "flex",
 									alignItems: "center",
-									justifyContent: "space-between"
+									justifyContent: "space-between",
 								}}
 							>
-								<div style={{display: "flex", flexWrap: "wrap"}}>
+								<div style={{ display: "flex", flexWrap: "wrap" }}>
 									<button
-										style={{ marginRight: "0.25rem" }}
+										style={{ marginRight: "0.25rem", whiteSpace: "nowrap" }}
 										onClick={playMorse.bind(null, item[1])}
+										className="u-hover-no-scale"
 									>
 										<HiOutlineSpeakerWave size="1rem" />
 									</button>

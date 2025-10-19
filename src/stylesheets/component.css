@@ -15,6 +15,9 @@ button:hover {
 	transform: scale(1.04);
 	transition: transform 150ms ease-out;
 }
+button.u-hover-no-scale:hover {
+	transform: none;
+}
 
 button:focus {
 	outline: none;
