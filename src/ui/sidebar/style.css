@@ -20,6 +20,11 @@
 	align-items: center;
 	gap: 1rem;
 	padding: 0.5rem 1rem;
+	text-align: left;
+}
+
+.sidebar .sidebar__menu_item p {
+	white-space: nowrap;
 }
 .sidebar .sidebar__menu_item:hover {
 	background-color: var(--color-dark-pastel-green);
@@ -29,5 +34,4 @@
 .sidebar .sidebar__menu_item--active {
 	background-color: var(--color-rich-black);
 	color: var(--color-baby-powder);
-
 }
