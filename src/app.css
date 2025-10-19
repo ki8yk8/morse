@@ -1,0 +1,10 @@
+#root {
+	padding: 2rem 4rem;
+	display: flex;
+	gap: 1rem;
+	height: 100%;
+}
+
+#root>main {
+	flex-grow: 1;
+}

@@ -1,0 +1,26 @@
+.sidebar {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border: 2px solid var(--color-rich-black);
+	padding: 0.25rem;
+}
+
+.sidebar > header {
+	padding: 0.5rem 1rem;
+}
+
+.sidebar__list__wrapper ul {
+	list-style-type: none;
+}
+
+.sidebar__menu_item {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding: 0.5rem 1rem;
+}
+.sidebar__menu_item:hover {
+	background-color: var(--color-dark-pastel-green);
+	cursor: pointer;
+}
