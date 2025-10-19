@@ -2,7 +2,8 @@
 The project aims to teach and practice Morse Code. If you have ever used war movies or satellite feeds you might here some dihs and dahs. That's morse code. Consider this a new langauge or challenge to learn such that you can communicate with your peers with just some beeps.
 
 ## Demo
-TODO and will be uploaded through GitHub
+[recording.webm](https://github.com/user-attachments/assets/c5b47cc7-d9a6-4bf0-848a-c4928c0fbb1f)
+
 
 # Tech Stack Used
 1. ReactJS
