@@ -18,6 +18,7 @@ export default function SendPage() {
 	}, []);
 
 	const handle_key_pressed = (event) => {
+		console.log(event.key);
 		if (event.key === ".") {
 			playMorse(".");
 			set_playing((prev) => ({ ...prev, dot: true }));
@@ -25,7 +26,9 @@ export default function SendPage() {
 			setTimeout(() => {
 				set_playing((prev) => ({ ...prev, dot: false }));
 			}, 100);
-		} else if (event.key === "-") {
+		}
+
+		if (event.key === "-") {
 			playMorse("-");
 			set_playing((prev) => ({ ...prev, dash: true }));
 
@@ -44,8 +47,8 @@ export default function SendPage() {
 				<div className={playing.dot ? "active" : ""}>
 					<FaCircle size="0.5rem" />
 				</div>
-				<div>
-					<FaMinus className={playing.dash ? "active" : ""} />
+				<div className={playing.dash ? "active" : ""}>
+					<FaMinus />
 				</div>
 			</section>
 		</>
