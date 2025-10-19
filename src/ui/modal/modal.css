@@ -1,6 +1,7 @@
 .modal {
 	max-width: 40vw;
 	max-height: 60vh;
+	background-color: var(--color-baby-powder);
 }
 
 @media  screen and (max-width: 720px) {

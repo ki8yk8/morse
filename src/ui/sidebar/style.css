@@ -21,6 +21,7 @@
 	gap: 1rem;
 	padding: 0.5rem 1rem;
 	text-align: left;
+	min-width: 200px;
 }
 
 .sidebar .sidebar__menu_item p {

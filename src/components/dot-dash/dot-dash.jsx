@@ -18,7 +18,7 @@ const color_mapping = {
 export default function DotDash({
 	content,
 	colors = [
-		"var(--color-rich-black)",
+		"var(--color-red-pantone)",
 		"var(--color-rich-black)",
 		"transparent",
 	],
