@@ -31,11 +31,11 @@ const SIDEBAR_CONFIG = {
 					name: "learn",
 					icon: LuNotebookPen,
 				},
-				{
-					type: "menu-item",
-					name: "practice",
-					icon: LuHammer,
-				},
+				// {
+				// 	type: "menu-item",
+				// 	name: "practice",
+				// 	icon: LuHammer,
+				// },
 				{
 					type: "menu-item",
 					name: "translate",
@@ -46,11 +46,11 @@ const SIDEBAR_CONFIG = {
 					name: "send",
 					icon: LuSend,
 				},
-				{
-					type: "menu-item",
-					name: "spy tools",
-					icon: LuFolderLock,
-				},
+				// {
+				// 	type: "menu-item",
+				// 	name: "spy tools",
+				// 	icon: LuFolderLock,
+				// },
 			],
 		},
 		{
