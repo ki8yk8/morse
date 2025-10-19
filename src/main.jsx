@@ -8,9 +8,12 @@ import "./stylesheets/typography.css";
 import "./stylesheets/component.css";
 
 import App from "./app.jsx";
+import { SettingsContextProvider } from "./contexts/settings.jsx";
 
 createRoot(document.getElementById("root")).render(
 	<StrictMode>
-		<App />
+		<SettingsContextProvider>
+			<App />
+		</SettingsContextProvider>
 	</StrictMode>
 );

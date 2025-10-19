@@ -1,9 +1,11 @@
-import { useRef } from "react";
+import { useContext, useRef } from "react";
+import SettingsContext from "../../contexts/settings";
 
-export default function useMorseSound(speed = 1000) {
+export default function useMorseSound() {
 	const audio_context_ref = useRef(null);
+	const { settings, set_settings } = useContext(SettingsContext);
 
-	const playBeep = (duration = 100) => {
+	const playBeep = (duration) => {
 		if (!audio_context_ref.current) {
 			audio_context_ref.current = new (window.AudioContext ||
 				window.webkitAudioContext)();
@@ -30,28 +32,28 @@ export default function useMorseSound(speed = 1000) {
 		// for each words play the character, then play space than another word
 		words.forEach((word) => {
 			const letters = word.split("/");
-			console.log(letters);
 
 			letters.forEach((letter) => {
 				const characters = letter.split("");
 
 				characters.forEach((character) => {
-					const duration = character === "." ? speed * 1 : speed * 3;
+					const duration =
+						character === "." ? settings.dih * 1 : settings.dih * 3;
 
 					// play the character
 					setTimeout(() => {
-						playBeep(duration);
+						playBeep(settings.dih);
 					}, time);
 
 					// play the space after character = 1 unit of silence
-					time += duration + 1 * speed;
+					time += settings.dih + settings.character * settings.dih;
 				});
 				// after each letter 3 units of silence
-				time += 3 * speed;
+				time += settings.letter * settings.dih;
 			});
 
 			// after each word 7 units of silence
-			time += 7 * speed;
+			time += settings.word * settings.dih;
 		});
 	};
 

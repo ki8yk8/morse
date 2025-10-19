@@ -1,8 +1,18 @@
+import { useContext, useState } from "react";
 import SingleRange from "../../components/range/range";
+import SettingsContext from "../../contexts/settings";
 
 export default function SettingsPage() {
+	const { settings, set_settings } = useContext(SettingsContext);
+	const [speed, set_speed] = useState(settings);
+
 	const handle_range_change = (name, value) => {
-		console.log(name, value[0]);
+		set_speed((prev) => ({ ...prev, [name]: value[0] }));
+	};
+
+	const handle_form_submit = (event) => {
+		event.preventDefault();
+		set_settings(speed);
 	};
 
 	return (
@@ -11,7 +21,8 @@ export default function SettingsPage() {
 			<main>
 				<section>
 					<h4>Speed Settings</h4>
-					<form>
+
+					<form onSubmit={handle_form_submit}>
 						<div>
 							<label>Duration of one unit</label>
 							<small>
@@ -19,10 +30,10 @@ export default function SettingsPage() {
 								unit to set other durations.
 							</small>
 							<SingleRange
-								lable="dih"
+								label="dih"
 								min={50}
 								max={1000}
-								initial={100}
+								initial={settings.dih}
 								step={50}
 								onChange={handle_range_change.bind(null, "dih")}
 							/>
@@ -34,10 +45,10 @@ export default function SettingsPage() {
 								The time interval between consecutive dih's and dah's
 							</small>
 							<SingleRange
-								lable="characters"
+								label="character"
 								min={0}
 								max={20}
-								initial={1}
+								initial={settings.character}
 								step={1}
 								onChange={handle_range_change.bind(null, "character")}
 							/>
@@ -50,10 +61,10 @@ export default function SettingsPage() {
 								sound
 							</small>
 							<SingleRange
-								lable="letter"
+								label="letter"
 								min={1}
 								max={20}
-								initial={3}
+								initial={settings.letter}
 								step={1}
 								onChange={handle_range_change.bind(null, "letter")}
 							/>
@@ -65,17 +76,16 @@ export default function SettingsPage() {
 								Time interval that spearates the two consecutive words
 							</small>
 							<SingleRange
-								lable="word"
+								label="word"
 								min={1}
 								max={20}
-								initial={7}
+								initial={settings.word}
 								step={1}
 								onChange={handle_range_change.bind(null, "word")}
 							/>
 						</div>
 
-						<button>Save Changes</button>
-						<button>Cancel</button>
+						<button type="submit">Save Changes</button>
 					</form>
 				</section>
 			</main>
