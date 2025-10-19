@@ -18,7 +18,6 @@ export default function SendPage() {
 	}, []);
 
 	const handle_key_pressed = (event) => {
-		console.log(event.key);
 		if (event.key === ".") {
 			playMorse(".");
 			set_playing((prev) => ({ ...prev, dot: true }));
@@ -45,10 +44,10 @@ export default function SendPage() {
 
 			<section className="morse_hint">
 				<div className={playing.dot ? "active" : ""}>
-					<FaCircle size="0.5rem" />
+					<FaCircle size="2rem" />
 				</div>
 				<div className={playing.dash ? "active" : ""}>
-					<FaMinus />
+					<FaMinus size="3rem" />
 				</div>
 			</section>
 		</>

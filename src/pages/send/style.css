@@ -3,6 +3,7 @@
 	flex-direction: row;
 	justify-content: center;
 	gap: 1rem;
+	margin-top: 2rem;
 }
 
 .morse_hint div {
@@ -12,8 +13,8 @@
 	background-color: var(--color-baby-powder);
 	color: var(--color-rich-black);
 	border: 0.15rem solid var(--color-rich-black);
-	width: 200px;
-	height: 50px;
+	flex-grow: 1;
+	height: 250px;
 }
 .morse_hint div.active {
 	background-color: var(--color-rich-black);
