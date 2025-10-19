@@ -1,0 +1,10 @@
+.translate_page {
+	display: flex;
+	gap: 1rem;
+	margin-top: 1rem;
+}
+
+.translate_page textarea {
+	display: block;
+	flex-grow: 1;
+}
