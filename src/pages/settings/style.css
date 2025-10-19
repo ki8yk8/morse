@@ -1,0 +1,18 @@
+.settings_page form > div {
+	margin-top: 1rem;
+}
+.settings_page form > div > label {
+	font-size: 1rem;
+}
+.settings_page form > div small {
+	display: block;
+	font-size: 0.7rem;
+	line-height: 0.8rem;
+	margin-bottom: 0.5rem;
+}
+
+.settings_page footer {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 1.25rem;
+}

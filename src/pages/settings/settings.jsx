@@ -2,6 +2,8 @@ import { useContext, useState } from "react";
 import SingleRange from "../../components/range/range";
 import SettingsContext from "../../contexts/settings";
 
+import "./style.css";
+
 export default function SettingsPage() {
 	const { settings, set_settings } = useContext(SettingsContext);
 	const [speed, set_speed] = useState(settings);
@@ -18,11 +20,18 @@ export default function SettingsPage() {
 	return (
 		<>
 			<h2>Settings</h2>
-			<main>
-				<section>
-					<h4>Speed Settings</h4>
-
-					<form onSubmit={handle_form_submit}>
+			<main
+				style={{
+					marginTop: "1rem",
+				}}
+			>
+				<section className="settings_page">
+					<form
+						onSubmit={handle_form_submit}
+						style={{
+							maxWidth: "500px",
+						}}
+					>
 						<div>
 							<label>Duration of one unit</label>
 							<small>
@@ -85,7 +94,9 @@ export default function SettingsPage() {
 							/>
 						</div>
 
-						<button type="submit">Save Changes</button>
+						<footer>
+							<button type="submit">Save Changes</button>
+						</footer>
 					</form>
 				</section>
 			</main>
