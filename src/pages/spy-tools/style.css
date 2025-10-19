@@ -1,0 +1,45 @@
+.spy__button {
+	display: inline-flex;
+	flex-direction: row;
+	gap: 0.25rem;
+	padding: 0.25rem;
+	border: 2px solid var(--color-rich-black);
+	background-color: var(--color-baby-powder);
+	margin-bottom: 1rem;
+}
+
+.spy__button button {
+	background-color: transparent;
+	padding: 0.25rem 1rem;
+}
+
+.spy__button button:hover {
+	transform: none;
+	background-color: var(--color-rich-black);
+	color: var(--color-baby-powder);
+}
+
+.spy__button button.active {
+	background-color: var(--color-rich-black);
+	color: var(--color-baby-powder);
+}
+
+.spy__button button.active:hover {
+	background-color: var(--color-dark-pastel-green);
+}
+
+.spy {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 1.25rem;
+}
+
+.spy form {
+	margin-top: 0.25rem;
+}
+
+.spy form small {
+	display: block;
+}
