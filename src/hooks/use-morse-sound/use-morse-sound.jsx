@@ -42,11 +42,11 @@ export default function useMorseSound() {
 
 					// play the character
 					setTimeout(() => {
-						playBeep(settings.dih);
+						playBeep(duration);
 					}, time);
 
 					// play the space after character = 1 unit of silence
-					time += settings.dih + settings.character * settings.dih;
+					time += duration + settings.character * settings.dih;
 				});
 				// after each letter 3 units of silence
 				time += settings.letter * settings.dih;
